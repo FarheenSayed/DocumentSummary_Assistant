@@ -1,0 +1,500 @@
+/* Upload.css — With Theme Toggle & Text Wrapping */
+
+.upload-container {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/* === THEME TOGGLE === */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* === DARK MODE === */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode .dropzone {
+  background: linear-gradient(135deg, #1e1e2f 0%, #1a237e 100%);
+}
+
+.dark-mode .dropzone:hover {
+  box-shadow: 0 8px 30px rgba(41, 98, 255, 0.25);
+}
+
+.dark-mode .dropzone.drag-active {
+  background: linear-gradient(135deg, #1e2b1e 0%, #0d47a1 100%);
+}
+
+.dark-mode .icon {
+  color: white;
+}
+
+.dark-mode .dropzone h3,
+.dark-mode .dropzone p.subtitle,
+.dark-mode .dropzone p.hint {
+  color: #ffffff;
+}
+
+.dark-mode .dropzone p.subtitle {
+  color: #b3daff;
+}
+
+.dark-mode .dropzone p.hint {
+  color: #9aa5b1;
+}
+
+.dark-mode .length-selector label {
+  color: #b3daff;
+}
+
+.dark-mode .length-selector select {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark-mode .length-selector select:focus {
+  border-color: #2962ff;
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.3);
+}
+
+.dark-mode .document-preview {
+  background-color: #1e1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .document-preview h3 {
+  color: #2962ff;
+}
+
+.dark-mode .filename {
+  color: #e0e0e0;
+}
+
+.dark-mode .download-btn {
+  background: linear-gradient(90deg, #2962ff, #00c853);
+  color: white;
+}
+
+.dark-mode .download-btn:hover {
+  background: linear-gradient(90deg, #0050e3, #00b347);
+}
+
+.dark-mode .preview-image {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .pdf-preview-box {
+  background-color: rgba(41, 98, 255, 0.1);
+  color: #b3daff;
+}
+
+.dark-mode .ai-summary,
+.dark-mode .improvements {
+  background-color: #1e1e2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode .ai-summary h3,
+.dark-mode .improvements h3 {
+  color: #00c853;
+}
+
+.dark-mode .content-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #e0ffe0;
+  border-left: 5px solid #00c853;
+}
+
+/* === LIGHT MODE === */
+.light-mode {
+  background-color: #ffffff;
+  color: #212121;
+}
+
+.light-mode .dropzone {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e3e3e3 100%);
+  color: #212121;
+}
+
+.light-mode .dropzone:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .dropzone.drag-active {
+  background: linear-gradient(135deg, #e0f7fa 0%, #b3e5fc 100%);
+}
+
+.light-mode .icon {
+  color: #212121;
+}
+
+.light-mode .dropzone h3,
+.light-mode .dropzone p.subtitle,
+.light-mode .dropzone p.hint {
+  color: #212121;
+}
+
+.light-mode .dropzone p.subtitle {
+  color: #0277bd;
+}
+
+.light-mode .dropzone p.hint {
+  color: #757575;
+}
+
+.light-mode .length-selector label {
+  color: #0277bd;
+}
+
+.light-mode .length-selector select {
+  background-color: #ffffff;
+  color: #212121;
+  border: 1px solid #bdbdbd;
+}
+
+.light-mode .length-selector select:focus {
+  border-color: #0277bd;
+  box-shadow: 0 0 0 2px rgba(2, 119, 189, 0.3);
+}
+
+.light-mode .document-preview {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .document-preview h3 {
+  color: #0277bd;
+}
+
+.light-mode .filename {
+  color: #212121;
+}
+
+.light-mode .download-btn {
+  background: linear-gradient(90deg, #0277bd, #00c853);
+  color: white;
+}
+
+.light-mode .download-btn:hover {
+  background: linear-gradient(90deg, #01579b, #00b347);
+}
+
+.light-mode .preview-image {
+  border: 1px solid #e0e0e0;
+}
+
+.light-mode .pdf-preview-box {
+  background-color: rgba(2, 119, 189, 0.1);
+  color: #0277bd;
+}
+
+.light-mode .ai-summary,
+.light-mode .improvements {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .ai-summary h3,
+.light-mode .improvements h3 {
+  color: #00c853;
+}
+
+.light-mode .content-box {
+  background-color: #fafafa;
+  color: #212121;
+  border-left: 5px solid #00c853;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* === DROPZONE === */
+.dropzone {
+  border: 2px dashed rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 80px 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  background: linear-gradient(135deg, #1e1e2f 0%, #1a237e 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dropzone:hover {
+  border-color: #2962ff;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(41, 98, 255, 0.25);
+}
+
+.dropzone.drag-active {
+  border-color: #00c853;
+  background: linear-gradient(135deg, #1e2b1e 0%, #0d47a1 100%);
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.dropzone:hover .icon {
+  transform: scale(1.1);
+}
+
+.dropzone h3 {
+  margin: 10px 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.dropzone p.subtitle {
+  color: #b3daff;
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+.dropzone p.hint {
+  color: #9aa5b1;
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
+/* === LOADING STATE === */
+.loading-state {
+  background: linear-gradient(135deg, #2c1a4a 0%, #4a1e4a 100%) !important;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #2962ff;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid rgba(255, 255, 255, 0.2);
+  border-top: 5px solid #2962ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === LENGTH SELECTOR === */
+.length-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 25px;
+  flex-wrap: wrap;
+}
+
+.length-selector label {
+  color: #b3daff;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.length-selector select {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  outline: none;
+  backdrop-filter: blur(4px);
+}
+
+.length-selector select:focus {
+  border-color: #2962ff;
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.3);
+}
+
+/* === FILE PREVIEW === */
+.document-preview {
+  margin: 30px 0;
+  padding: 28px;
+  background-color: #1e1e2e;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.document-preview h3 {
+  color: #2962ff;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filename {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+.download-btn {
+  background: linear-gradient(90deg, #2962ff, #00c853);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(41, 98, 255, 0.3);
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(41, 98, 255, 0.4);
+  background: linear-gradient(90deg, #0050e3, #00b347);
+}
+
+/* === IMAGE PREVIEW === */
+.preview-image-wrapper {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.preview-image {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.pdf-preview-box {
+  padding: 20px;
+  background-color: rgba(41, 98, 255, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #b3daff;
+  margin-top: 15px;
+}
+
+/* === SUMMARY & IMPROVEMENTS === */
+.ai-summary, .improvements {
+  margin: 30px 0;
+  padding: 28px;
+  background-color: #1e1e2e;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+}
+
+.ai-summary h3, .improvements h3 {
+  color: #00c853;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content-box {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  white-space: pre-wrap; /* ← This is key for wrapping */
+  font-family: 'Consolas', 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #e0ffe0;
+  border-left: 5px solid #00c853;
+}
+
+.content-box pre {
+  margin: 0;
+  color: inherit;
+}
+
+/* === TEXT WRAPPING FIX === */
+.summary-text,
+.improvements-text {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: inherit;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .dropzone {
+    padding: 60px 20px;
+  }
+
+  .file-info {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .download-btn {
+    text-align: center;
+  }
+
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}

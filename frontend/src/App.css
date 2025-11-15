@@ -1,0 +1,223 @@
+/* App.css — Professional AI Document Assistant Theme */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: #121212;
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.App h1 {
+  color: #2962ff;
+  text-align: center;
+  font-weight: 600;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 10px rgba(41, 98, 255, 0.1);
+}
+
+/* === UPLOAD ZONE === */
+.dropzone {
+  border: 2px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 60px 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #1e1e1e;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropzone:hover,
+.dropzone.drag-active {
+  border-color: #2962ff;
+  background-color: #202020;
+  box-shadow: 0 0 20px rgba(41, 98, 255, 0.2);
+}
+
+.dropzone p {
+  color: #b0b0b0;
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.dropzone p:first-child {
+  font-size: 2.5rem;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.dropzone .loading {
+  font-size: 1.2rem;
+  color: #2962ff;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.length-selector {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.length-selector label {
+  color: #b0b0b0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.length-selector select {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.length-selector select:focus {
+  border-color: #2962ff;
+  box-shadow: 0 0 0 2px rgba(41, 98, 255, 0.3);
+}
+
+/* === DOCUMENT PREVIEW === */
+.document-preview {
+  margin: 30px 0;
+  padding: 24px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.document-preview h3 {
+  color: #2962ff;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.file-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding: 12px 16px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.download-link {
+  color: #2962ff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border: 1px solid #2962ff;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.download-link:hover {
+  background-color: #2962ff;
+  color: white;
+}
+
+.image-preview-container {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.image-preview-container img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pdf-preview {
+  padding: 18px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 0.95rem;
+  color: #b0b0b0;
+  margin-top: 16px;
+}
+
+/* === SUMMARY & IMPROVEMENTS === */
+.ai-summary,
+.improvements {
+  margin: 30px 0;
+  padding: 24px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ai-summary h3,
+.improvements h3 {
+  color: #00c853;
+  margin-bottom: 16px;
+  font-size: 1.3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}
+
+.summary-content,
+.improvements-content {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 18px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  font-family: 'Consolas', Monaco, 'Courier New', monospace;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  margin-top: 12px;
+  border-left: 4px solid #00c853;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .App {
+    padding: 20px 10px;
+  }
+
+  .App h1 {
+    font-size: 2rem;
+  }
+
+  .dropzone {
+    padding: 40px 20px;
+  }
+
+  .length-selector {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
